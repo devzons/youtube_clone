@@ -1,25 +1,9 @@
-# Youtube Clone Project Using Mui v5
+import React from 'react'
+import { Stack, Box } from '@mui/material'
 
-## RapidAPI
+import { ChannelCard, Loader, VideoCard } from './'
 
-- [Youtube v3](https://rapidapi.com/ytdlfree/api/youtube-v31)
-
-## Dependencies
-
-- vscode extension: RapidAPI Client
-
-`npm install @mui/material @mui/icons-material @emotion/react @emotion/styled react-router-dom react-player axios`
-`npm install --legacy-peer-deps`
-
-## Logo
-
-- Direct Link: `https://i.ibb.co/phPysLK/logo.png`
-- color: #2666eb
-
-## Fix layout issue with playlistId
-
-```javascript
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
   if (!videos?.length) return <Loader />
 
   return (
@@ -43,4 +27,5 @@ const Videos = ({ videos }) => {
     </Stack>
   )
 }
-```
+
+export default Videos
